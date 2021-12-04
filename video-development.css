@@ -11,3 +11,12 @@
 .developmentVideo .card-img-overlay p {
     font-weight: 500;
 }
+
+
+@media screen and (max-width: 991.99px) {
+
+    .developmentVideo .card-img-overlay {
+        padding: 0;
+        position: unset;
+    }
+}
