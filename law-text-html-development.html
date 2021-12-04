@@ -7,18 +7,21 @@
     </div>
   </div>
 
-  <div class="card-img-overlay container standardContent">
-    <div class="card-header bg-transparent border-0">
-      <t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="<h2 class=&quot;card-title&quot;>$value</h2>" />
-    </div>
-    
-    <div class="card-body">
-      <t4 type="content" name="Description" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text text-white&quot;>$value</p>" />
-    </div>
-    
-    <div class="card-footer bg-transparent border-0">
-      <t4 type="content" name="Footer" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text text-white&quot;>$value</p>" />
+  <div class="card-img-overlay">
+    <div class="container standardContent mt-5 pt-5">
+
+      <div class="card-header bg-transparent border-0 m-5 p-5">
+        <t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="<h2 class=&quot;card-title fs-1&quot;>$value</h2>" />
+      </div>
+      
+      <div class="card-body m-5 p-5">
+        <t4 type="content" name="Description" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text text-white fs-3&quot;>$value</p>" />
+      </div>
+      
+      <div class="card-footer bg-transparent border-0 m-5 p-5">
+        <t4 type="content" name="Footer" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text text-white fs-2&quot;>$value</p>" />
+      </div>
+
     </div>
   </div>
-
 </div>
