@@ -3,3 +3,11 @@
     width: 100vw;
     height: calc(100vw/1);
 }
+
+.developmentVideo .card-img-overlay h2 {
+    font-weight: 500;
+}
+
+.developmentVideo .card-img-overlay p {
+    font-weight: 500;
+}
