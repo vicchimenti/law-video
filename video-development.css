@@ -1,4 +1,5 @@
 /*** Law - Video Development ID: 5609  ***/
+
 .developmentVideo iframe {
     width: 100vw;
     height: calc(100vw/1.9);
@@ -19,4 +20,19 @@
         padding: 0;
         position: unset;
     }
+
+    .developmentVideob .card-img-overlay .card-header {
+        margin: 0!important;
+        padding: 0!important;
+    }
+
+    .developmentVideob .card-img-overlay .container {
+        margin-top: 0!important;
+        padding-top: 0!important;
+    }
+
+    .developmentVideo .card-img-overlay .card-body .text-white {
+        color: #000000!important;
+    }
 }
+
