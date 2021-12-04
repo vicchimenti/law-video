@@ -1,7 +1,7 @@
 /*** Law - Video Development ID: 5609  ***/
 .developmentVideo iframe {
     width: 100vw;
-    height: calc(100vw/1.777);
+    height: calc(100vw/1.9);
 }
 
 .developmentVideo .card-img-overlay h2 {
