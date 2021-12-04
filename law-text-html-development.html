@@ -1,4 +1,4 @@
-<div class="embeddedVideoWrapper developmentVideo contentItem col card border-0 g-0" id="id<t4 type='meta' meta='content_id' />" data-position-default="Main" data-position-selected="Main">
+<div class="embeddedVideoWrapper developmentVideo contentItem col card text-center border-0 g-0" id="id<t4 type='meta' meta='content_id' />" data-position-default="Main" data-position-selected="Main">
   <t4 type="meta" meta="html_anchor" />
 
   <div class="embeddedVideo">
@@ -8,9 +8,17 @@
   </div>
 
   <div class="card-img-overlay">
-    <t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="<h2 class=&quot;card-title&quot;>$value</h2>" />
-    <t4 type="content" name="Description" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text&quot;>$value</p>" />
-    <t4 type="content" name="Footer" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text&quot;>$value</p>" />
+    <div class="card-header">
+      <t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="<h2 class=&quot;card-title&quot;>$value</h2>" />
+    </div>
+    
+    <div class="card-body">
+      <t4 type="content" name="Description" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text&quot;>$value</p>" />
+    </div>
+    
+    <div class="card-footer">
+      <t4 type="content" name="Footer" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text&quot;>$value</p>" />
+    </div>
   </div>
 
   <t4 type="content" name="Description" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" format="<div class=&quot;embeddedVideoDescriptionWrapper&quot;>
