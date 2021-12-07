@@ -95,8 +95,6 @@
       *  Declare/Assign local variables with base formatting
       * 
       * */
-     let openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
-     let closeHiddenFields = '</div>';
      let openCardBody = '<div class="card-body">';
      let closeCardBody = '</div>';
      let openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
@@ -105,13 +103,11 @@
      let closeImageWrapper = '</div>';
      let openFig = '<figure class="figure visually-hidden">';
      let closeFig = '</figure>'
-     let openRow = '<div class="row g-0">';
-     let closeRow = '</div>';
      let openCard = '<div class="card h-100 w-100 border-0">';
      let closeCard = '</div>';
      let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
-     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + ytvDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + ytvDict.firstName.content + ' ' + ytvDict.lastName.content + '">Contact ' + ytvDict.firstName.content + '</a></p>';
-     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + ytvDict.primaryTitle.content + '</p>';
+     
+     
      let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card g-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
      let endingHTML = '</div>';
  
@@ -172,25 +168,37 @@
      writeDocument(
          [
              beginningHTML,
+
+
              openCard,
-             openRow,
+
+
              openImageWrapper,
+
              openFig,
+
              primaryImageString,
+
              closeFig,
+
              closeImageWrapper,
+
              openBodyWrapper,
+
              openCardBody,
+
              cardTitle,
-             primaryTitleString,
-             emailAddressString,
-             openHiddenFields,
-             facultyStatusString,
-             closeHiddenFields,
+
+
+
              closeCardBody,
+
              closeBodyWrapper,
-             closeRow,
+
+
              closeCard,
+
+
              endingHTML
          ]
      );
