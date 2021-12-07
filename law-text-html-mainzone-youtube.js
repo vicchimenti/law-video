@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.3
+ *      @version 1.4
  */
 
 
@@ -95,7 +95,7 @@
       *  Declare/Assign local variables with base formatting
       * 
       * */ 
-     let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border rounded-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
+     let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border-0 rounded-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
      let endingHTML = '</div>';
      let closeCardFooter = '</div>';
      let closeCardBody = '</div>';
@@ -168,7 +168,7 @@
       * 
       * */
      let openCardFooter = (ytvDict.footer.content)
-                          ? '<div class="card-footer">'
+                          ? '<div class="card-footer border-0 rounded-0">'
                           : '<div class="card-footer visually-hidden">';
 
 
