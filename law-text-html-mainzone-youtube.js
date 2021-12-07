@@ -134,23 +134,35 @@
 
 
 
-
-
-
-
-
- 
- 
- 
      /***
-      *  determine if the article contains full text content
+      *  parse for title
       * 
       * */
- 
-     let cardTitle = (ytvDict.biography.content) ?
-         '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + ytvDict.fullTextLink.content + '" title="' + ytvDict.firstName.content + ' ' + ytvDict.lastName.content + ', ' + ytvDict.primaryTitle.content + '">' + ytvDict.firstName.content + ' ' + ytvDict.lastName.content + '</a></h3>' :
-         '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + ytvDict.firstName.content + ' ' + ytvDict.lastName.content + '</h3>';
- 
+     let cardTitle =  (ytvDict.title.content)
+                      ? '<h3 class="card-title videoTitle">' + ytvDict.title.content + '</h3>'
+                      : '<h3 class="sr-only">' + ytvDict.contentName.content + '</h3>';
+
+
+
+
+    /***
+      *  parse for description
+      * 
+      * */
+     let cardBody = (ytvDict.description.content)
+                    ? '<p class="card-text videoDescription">' + ytvDict.description.content + '</p>'
+                    : '<span class="visually-hidden videoDescription">No Description Entered</span>';
+
+
+
+
+    /***
+      *  parse for link
+      * 
+      * */
+     let cardLink = (ytvDict.linkPath.content && ytvDict.linkText.content)
+                    ? '<p class="card-text videoDescription">' + ytvDict.description.content + '</p>'
+                    : '<span class="visually-hidden videoDescription">No Description Entered</span>';
  
  
  
@@ -203,16 +215,10 @@
              closeVideoInner,
              closeVideoWrapper,
              openCardBody,
-
-
-
-
-
              cardTitle,
 
 
-
-
+             cardBody,
              closeCardBody,
 
              openCardFooter,
