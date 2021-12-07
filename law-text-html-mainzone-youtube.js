@@ -161,8 +161,8 @@
       * 
       * */
      let cardLink = (ytvDict.linkPath.content && ytvDict.linkText.content)
-                    ? '<p class="card-text videoDescription">' + ytvDict.description.content + '</p>'
-                    : '<span class="visually-hidden videoDescription">No Description Entered</span>';
+                    ? '<p class="card-text videoLink"><a href="' + contentDict.sectionLink.content + '" class="card-link" title="For more information visit: ' + contentDict.sectionLinkText.content + '" target="_blank"><em>' + contentDict.sectionLinkText.content + '</em></a></p>'
+                    : '<p class="card-text videoLink visually-hidden">No Proper Link Provided</p>';
  
  
  
