@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.2
+ *      @version 1.3
  */
 
 
@@ -95,14 +95,14 @@
       *  Declare/Assign local variables with base formatting
       * 
       * */ 
+     let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border rounded-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
+     let endingHTML = '</div>';
      let closeCardFooter = '</div>';
      let closeCardBody = '</div>';
      let openVideoWrapper = '<div class="embeddedVideo">';
      let closeVideoWrapper = '</div>';
      let openVideoInner = '<div class="embeddedVideoInner container-fluid g-0">';
      let closeVideoInner = '</div>';
-     let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border rounded-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
-     let endingHTML = '</div>';
 
 
 
@@ -216,41 +216,3 @@
  } catch (err) {
      document.write(err.message);
  }
-
-
-
- <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-<div class="embeddedVideoWrapper autoplay contentItem col card text-center border-0 g-0" id="id<t4 type='meta' meta='content_id' />" data-position-default="Main" data-position-selected="Main">
-  <t4 type="meta" meta="html_anchor" />
-
-  <div class="embeddedVideo">
-    <div class="embeddedVideoInner container-fluid g-0">
-      <iframe src="https://www.youtube.com/embed/<t4 type='content' name='Video ID' output='normal' modifiers='striptags' />?playlist=<t4 type='content' name='Video ID' output='normal' modifiers='striptags' />&mute=0&enablejsapi=1&autoplay=0&loop=1&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="<t4 type='content' name='Name' output='normal' modifiers='striptags,htmlentities' />"></iframe>
-    </div>
-  </div>
-
-  <div class="card-img-overlay">
-    <div class="container standardContent mt-3 pt-3">
-      <div class="d-flex flex-column align-items-center">
-
-        <div class="card-header bg-transparent border-0 m-3 mt-5 p-3 pt-5">
-          <t4 type="content" name="Title" output="selective-output" modifiers="striptags,htmlentities" format="<h2 class=&quot;card-title fs-1&quot;>$value</h2>" />
-        </div>
-        
-        <div class="card-body">
-          <t4 type="content" name="Description" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text text-white fs-3&quot;>$value</p>" />
-          <t4 type="content" name="Footer" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-text text-white fs-2&quot;>$value</p>" />
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</div>
