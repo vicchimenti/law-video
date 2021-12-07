@@ -1,15 +1,14 @@
 /***
  *    @author Victor Chimenti, MSCS
- *    @see Seattle University School of Law Faculty Profile Type View
+ *    @see Seattle University School of Law Mainzone YouTube Video
  *    @file output-profile.js
- *          Law - Faculty Profile
- *          ID: 5143
- *          output/profile
- *          For Status based masonry feeds
+ *          Law - Video Mainzone Youtube
+ *          ID: 5614
+ *          law/text/html
  *
  *      Document will write once when the page loads
  *
- *      @version 5.6
+ *      @version 6.0
  */
 
 
