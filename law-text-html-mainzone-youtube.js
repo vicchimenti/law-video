@@ -112,8 +112,8 @@
      let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
      let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + ytvDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + ytvDict.firstName.content + ' ' + ytvDict.lastName.content + '">Contact ' + ytvDict.firstName.content + '</a></p>';
      let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + ytvDict.primaryTitle.content + '</p>';
-     let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + ytvDict.contentId.content + '" aria-label="' + ytvDict.firstName.content + ' ' + ytvDict.lastName.content + '">';
-     let endingHTML = '</article>';
+     let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card g-0" id="ytvmain' + ytvDict.contentId.content + '">';
+     let endingHTML = '</div>';
  
  
  
