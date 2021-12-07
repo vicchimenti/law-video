@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.4
+ *      @version 1.5
  */
 
 
@@ -179,7 +179,7 @@
       * 
       * */
      let cardFooter = (ytvDict.footer.content)
-                      ? '<p class="card-text cardFooter">' + ytvDict.linkText.content + '</p>'
+                      ? '<p class="card-text cardFooter">' + ytvDict.footer.content + '</p>'
                       : '<span class="cardFooter visually-hidden">No Footer provided</span>';
  
  
