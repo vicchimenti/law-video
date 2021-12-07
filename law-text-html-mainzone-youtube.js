@@ -126,7 +126,9 @@
     * 
     * */
 
-    let videoString = '<iframe src="https://www.youtube.com/embed/<t4 type='content' name='Video ID' output='normal' modifiers='striptags' />?playlist=<t4 type='content' name='Video ID' output='normal' modifiers='striptags' />&mute=0&enablejsapi=1&autoplay=0&loop=1&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="<t4 type='content' name='Name' output='normal' modifiers='striptags,htmlentities' />"></iframe>';
+    let videoString = (ytvDict.title.content)
+                      ? '<iframe src="https://www.youtube.com/embed/' + ytvDict.videoId.content + '?playlist=' + ytvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=1&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + ytvDict.title.content + '"></iframe>'
+                      : '<iframe src="https://www.youtube.com/embed/' + ytvDict.videoId.content + '?playlist=' + ytvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=1&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + ytvDict.contentName.content + '"></iframe>';
 
 
 
@@ -199,7 +201,7 @@
              openVideoInner,
 
              videoString,
-             
+
              closeVideoInner,
              closeVideoWrapper,
 
