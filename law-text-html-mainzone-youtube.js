@@ -101,16 +101,27 @@
      let closeBodyWrapper = '</div>';
      let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
      let closeImageWrapper = '</div>';
+
+
      let openFig = '<figure class="figure visually-hidden">';
      let closeFig = '</figure>'
      let openCard = '<div class="card h-100 w-100 border-0">';
      let closeCard = '</div>';
      let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
      
-     
+
+
+     let openVideoWrapper = '<div class="embeddedVideo">';
+     let closeVideoWrapper = '</div>';
+     let openVideoInner = '<div class="embeddedVideoInner container-fluid g-0">';
+     let closeVideoInner = '</div>';
      let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card g-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
      let endingHTML = '</div>';
  
+
+
+
+
  
  
  
@@ -168,9 +179,14 @@
      writeDocument(
          [
              beginningHTML,
+             ytvDict.anchorTag.content,
+             openCardBody,
+             openVideoWrapper,
+             openVideoInner,
 
 
-             openCard,
+             closeVideoInner,
+             closeVideoWrapper,
 
 
              openImageWrapper,
@@ -189,16 +205,11 @@
 
              cardTitle,
 
-
-
-             closeCardBody,
-
              closeBodyWrapper,
 
 
-             closeCard,
 
-
+             closeCardBody,
              endingHTML
          ]
      );
@@ -211,6 +222,15 @@
  }
 
 
+
+ <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
 <div class="embeddedVideoWrapper autoplay contentItem col card text-center border-0 g-0" id="id<t4 type='meta' meta='content_id' />" data-position-default="Main" data-position-selected="Main">
   <t4 type="meta" meta="html_anchor" />
