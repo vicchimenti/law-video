@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.1
+ *      @version 1.2
  */
 
 
@@ -94,20 +94,7 @@
      /***
       *  Declare/Assign local variables with base formatting
       * 
-      * */
-
-     let openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
-     let closeBodyWrapper = '</div>';
-     let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
-     let closeImageWrapper = '</div>';
-
-
-     let openFig = '<figure class="figure visually-hidden">';
-     let closeFig = '</figure>'
-     let openCard = '<div class="card h-100 w-100 border-0">';
-     let closeCard = '</div>';
-     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
-     
+      * */ 
      let closeCardFooter = '</div>';
      let closeCardBody = '</div>';
      let openVideoWrapper = '<div class="embeddedVideo">';
@@ -128,6 +115,17 @@
     let videoString = (ytvDict.title.content)
                       ? '<iframe src="https://www.youtube.com/embed/' + ytvDict.videoId.content + '?playlist=' + ytvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + ytvDict.title.content + '" class="card-img-top"></iframe>'
                       : '<iframe src="https://www.youtube.com/embed/' + ytvDict.videoId.content + '?playlist=' + ytvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + ytvDict.contentName.content + '" class="card-img-top"></iframe>';
+
+
+
+
+    /***
+      *  define body wrapper
+      * 
+      * */
+     let openCardBody = (ytvDict.title.content || ytvDict.description.content || ytvDict.linkPath.content)
+                        ? '<div class="card-body">'
+                        : '<div class="card-body visually-hidden">';
 
 
 
@@ -163,7 +161,17 @@
                     : '<span class="videoLink visually-hidden">No Proper Link Provided</span>';
 
 
-                    let openCardFooter = '<div class="card-footer">';
+
+
+    /***
+      *  define footer wrapper
+      * 
+      * */
+     let openCardFooter = (ytvDict.footer.content)
+                          ? '<div class="card-footer">'
+                          : '<div class="card-footer visually-hidden">';
+
+
 
 
     /***
@@ -173,62 +181,6 @@
      let cardFooter = (ytvDict.footer.content)
                       ? '<p class="card-text cardFooter">' + ytvDict.linkText.content + '</p>'
                       : '<span class="cardFooter visually-hidden">No Footer provided</span>';
-
-
-
-
-    /***
-      *  define footer wrapper
-      * 
-      * */
-     let openCardBody = (ytvDict.title.content || ytvDict.description.content || ytvDict.footer.content || ytvDict.linkPath.content)
-                        ? '<div class="card-body">'
-                        : '<div class="card-body visually-hidden">';
-
-
-
-
-    /***
-      *  define body wrapper
-      * 
-      * */
-     let openCardFooter = (ytvDict.footer.content)
-     ? '<div class="card-footer">'
-     : '<div class="card-footer visually-hidden">';
-                      
- 
- 
-     /***
-      *  parse hidden search fields
-      * 
-      * */
-     let facultyStatusString = (ytvDict.facultyStatus.content) ?
-         '<span class="visually-hidden facultyStatus">' + ytvDict.facultyStatus.content + '</span>' :
-         '<span class="visually-hidden facultyStatus">No Status Entered</span>';
- 
- 
- 
- 
-     /***
-      *  Parse for image
-      * 
-      * */
-     if (ytvDict.primaryImage.content) {
- 
-         let imageID = content.get('Profile Pic').getID();
-         let mediaInfo = getMediaInfo(imageID);
-         let media = readMedia(imageID);
-         let info = new ImageInfo;
-         info.setInput(media);
- 
-         let imageDefaultAlt = ytvDict.fullName.content || ytvDict.contentName.content;
- 
-         primaryImageString = (info.check()) ?
-             '<img src="' + ytvDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-             '<img src="' + ytvDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
- 
-         openFig = '<figure class="figure">';
-     }
  
  
  
@@ -251,7 +203,6 @@
              cardLink,
              cardBody,
              closeCardBody,
-
              openCardFooter,
              cardFooter,
              closeCardFooter,
