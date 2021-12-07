@@ -95,8 +95,7 @@
       *  Declare/Assign local variables with base formatting
       * 
       * */
-     let openCardBody = '<div class="card-body">';
-     let closeCardBody = '</div>';
+
      let openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
      let closeBodyWrapper = '</div>';
      let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
@@ -109,13 +108,15 @@
      let closeCard = '</div>';
      let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
      
-
-
+     let openCardFooter = '<div class="card-footer">';
+     let closeCardFooter = '</div>';
+     let openCardBody = '<div class="card-body">';
+     let closeCardBody = '</div>';
      let openVideoWrapper = '<div class="embeddedVideo">';
      let closeVideoWrapper = '</div>';
      let openVideoInner = '<div class="embeddedVideoInner container-fluid g-0">';
      let closeVideoInner = '</div>';
-     let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card g-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
+     let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border rounded-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
      let endingHTML = '</div>';
 
 
@@ -196,37 +197,27 @@
          [
              beginningHTML,
              ytvDict.anchorTag.content,
-             openCardBody,
              openVideoWrapper,
              openVideoInner,
-
              videoString,
-
              closeVideoInner,
              closeVideoWrapper,
-
-
-             openImageWrapper,
-
-             openFig,
-
-             primaryImageString,
-
-             closeFig,
-
-             closeImageWrapper,
-
-             openBodyWrapper,
-
              openCardBody,
+
+
+
+
 
              cardTitle,
 
-             closeBodyWrapper,
 
 
 
              closeCardBody,
+
+             openCardFooter,
+
+             closeCardFooter,
              endingHTML
          ]
      );
