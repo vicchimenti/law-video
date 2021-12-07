@@ -108,9 +108,7 @@
      let closeCard = '</div>';
      let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
      
-     let openCardFooter = '<div class="card-footer">';
      let closeCardFooter = '</div>';
-     let openCardBody = '<div class="card-body">';
      let closeCardBody = '</div>';
      let openVideoWrapper = '<div class="embeddedVideo">';
      let closeVideoWrapper = '</div>';
@@ -163,7 +161,41 @@
      let cardLink = (ytvDict.linkPath.content && ytvDict.linkText.content)
                     ? '<p class="card-text videoLink"><a href="' + ytvDict.linkPath.content + '" class="card-link" title="For more information visit: ' + ytvDict.linkText.content + '" target="_blank"><em>' + ytvDict.linkText.content + '</em></a></p>'
                     : '<span class="videoLink visually-hidden">No Proper Link Provided</span>';
- 
+
+
+                    let openCardFooter = '<div class="card-footer">';
+
+
+    /***
+      *  parse for footer
+      * 
+      * */
+     let cardFooter = (ytvDict.footer.content)
+                      ? '<p class="card-text cardFooter">' + ytvDict.linkText.content + '</p>'
+                      : '<span class="cardFooter visually-hidden">No Footer provided</span>';
+
+
+
+
+    /***
+      *  define footer wrapper
+      * 
+      * */
+     let openCardBody = (ytvDict.title.content || ytvDict.description.content || ytvDict.footer.content || ytvDict.linkPath.content)
+                        ? '<div class="card-body">'
+                        : '<div class="card-body visually-hidden">';
+
+
+
+
+    /***
+      *  define body wrapper
+      * 
+      * */
+     let openCardFooter = (ytvDict.footer.content)
+     ? '<div class="card-footer">'
+     : '<div class="card-footer visually-hidden">';
+                      
  
  
      /***
@@ -221,7 +253,7 @@
              closeCardBody,
 
              openCardFooter,
-
+             cardFooter,
              closeCardFooter,
              endingHTML
          ]
