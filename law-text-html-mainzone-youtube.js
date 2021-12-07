@@ -161,8 +161,8 @@
       * 
       * */
      let cardLink = (ytvDict.linkPath.content && ytvDict.linkText.content)
-                    ? '<p class="card-text videoLink"><a href="' + contentDict.sectionLink.content + '" class="card-link" title="For more information visit: ' + contentDict.sectionLinkText.content + '" target="_blank"><em>' + contentDict.sectionLinkText.content + '</em></a></p>'
-                    : '<p class="card-text videoLink visually-hidden">No Proper Link Provided</p>';
+                    ? '<p class="card-text videoLink"><a href="' + ytvDict.linkPath.content + '" class="card-link" title="For more information visit: ' + ytvDict.linkText.content + '" target="_blank"><em>' + ytvDict.linkText.content + '</em></a></p>'
+                    : '<span class="videoLink visually-hidden">No Proper Link Provided</span>';
  
  
  
@@ -216,8 +216,7 @@
              closeVideoWrapper,
              openCardBody,
              cardTitle,
-
-
+             cardLink,
              cardBody,
              closeCardBody,
 
