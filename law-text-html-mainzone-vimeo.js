@@ -95,7 +95,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border-0 rounded-0" id="ytvmain' + vmvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
+    let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border-0 rounded-0" id="vmvmain' + vmvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
     let endingHTML = '</div>';
     let closeCardFooter = '</div>';
     let closeCardBody = '</div>';
@@ -113,8 +113,8 @@ try {
      * */
 
     let videoString = (vmvDict.title.content) ?
-        '<iframe src="https://www.youtube.com/embed/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
-        '<iframe src="https://www.youtube.com/embed/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
+        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
+        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
 
     https: //player.vimeo.com/video/<t4 type='content' name='Video ID' output='normal' modifiers='striptags' />?<t4 type='content' name='Account Control Code' output='normal' modifiers='striptags,htmlentities' />&autoplay=true&loop=true&byline=false&controls=true&muted=true&portrait=false&title=false&speed=false&background=1&api=1"  loading="eagar" 
 
