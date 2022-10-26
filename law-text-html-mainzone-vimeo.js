@@ -1,14 +1,14 @@
 /***
  *    @author Victor Chimenti, MSCS
- *    @see Seattle University School of Law Mainzone YouTube Video
+ *    @see Seattle University School of Law Mainzone Vimeo Video
  *    @file output-profile.js
- *          Law - Video Mainzone Youtube
- *          ID: 5614
+ *          Law - Video Mainzone Vimeo
+ *          ID: 6118
  *          law/text/html
  *
  *      Document will write once when the page loads
  *
- *      @version 1.7
+ *      @version 1.0
  */
 
 
