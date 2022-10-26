@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 2.2
+ *      @version 2.3
  */
 
 
@@ -95,7 +95,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border-0 rounded-0" id="vmvmain' + vmvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
+    let beginningHTML = '<div class="embeddedVideoWrapper contentItem vmv col card border-0 rounded-0" id="vmvmain' + vmvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
     let endingHTML = '</div>';
     let closeCardFooter = '</div>';
     let closeCardBody = '</div>';
