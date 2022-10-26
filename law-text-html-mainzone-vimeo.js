@@ -37,14 +37,14 @@ function getContentValues(tag) {
         return {
             isError: false,
             content: _tag == '' ? null : _tag
-        }
+        };
 
     } catch (error) {
 
         return {
             isError: true,
             message: error.message
-        }
+        };
     }
 }
 
@@ -74,7 +74,7 @@ try {
     /***
      *      Dictionary of content
      * */
-    let ytvDict = {
+    let vmvDict = {
 
         contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         videoId: getContentValues('<t4 type="content" name="Video ID" output="normal" modifiers="striptags,htmlentities" />'),
@@ -95,7 +95,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border-0 rounded-0" id="ytvmain' + ytvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
+    let beginningHTML = '<div class="embeddedVideoWrapper contentItem ytv col card border-0 rounded-0" id="ytvmain' + vmvDict.contentId.content + '" data-position-default="Main" data-position-selected="Main">';
     let endingHTML = '</div>';
     let closeCardFooter = '</div>';
     let closeCardBody = '</div>';
@@ -112,20 +112,21 @@ try {
      * 
      * */
 
-    let videoString = (ytvDict.title.content) ?
-        '<iframe src="https://www.youtube.com/embed/' + ytvDict.videoId.content + '?playlist=' + ytvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + ytvDict.title.content + '" class="card-img-top"></iframe>' :
-        '<iframe src="https://www.youtube.com/embed/' + ytvDict.videoId.content + '?playlist=' + ytvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + ytvDict.contentName.content + '" class="card-img-top"></iframe>';
+    let videoString = (vmvDict.title.content) ?
+        '<iframe src="https://www.youtube.com/embed/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
+        '<iframe src="https://www.youtube.com/embed/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
+
+    https: //player.vimeo.com/video/<t4 type='content' name='Video ID' output='normal' modifiers='striptags' />?<t4 type='content' name='Account Control Code' output='normal' modifiers='striptags,htmlentities' />&autoplay=true&loop=true&byline=false&controls=true&muted=true&portrait=false&title=false&speed=false&background=1&api=1"  loading="eagar" 
 
 
 
-
-    /***
-     *  define body wrapper
-     * 
-     * */
-    let openCardBody = (ytvDict.title.content || ytvDict.description.content || ytvDict.linkPath.content) ?
-        '<div class="card-body">' :
-        '<div class="card-body visually-hidden">';
+        /***
+         *  define body wrapper
+         * 
+         * */
+        let openCardBody = (vmvDict.title.content || vmvDict.description.content || vmvDict.linkPath.content) ?
+            '<div class="card-body">' :
+            '<div class="card-body visually-hidden">';
 
 
 
@@ -134,9 +135,9 @@ try {
      *  parse for title
      * 
      * */
-    let cardTitle = (ytvDict.title.content) ?
-        '<h3 class="card-title videoTitle">' + ytvDict.title.content + '</h3>' :
-        '<h3 class="sr-only">' + ytvDict.contentName.content + '</h3>';
+    let cardTitle = (vmvDict.title.content) ?
+        '<h3 class="card-title videoTitle">' + vmvDict.title.content + '</h3>' :
+        '<h3 class="sr-only">' + vmvDict.contentName.content + '</h3>';
 
 
 
@@ -145,8 +146,8 @@ try {
      *  parse for description
      * 
      * */
-    let cardBody = (ytvDict.description.content) ?
-        '<p class="card-text videoDescription">' + ytvDict.description.content + '</p>' :
+    let cardBody = (vmvDict.description.content) ?
+        '<p class="card-text videoDescription">' + vmvDict.description.content + '</p>' :
         '<span class="visually-hidden videoDescription">No Description Entered</span>';
 
 
@@ -156,8 +157,8 @@ try {
      *  parse for link
      * 
      * */
-    let cardLink = (ytvDict.linkPath.content && ytvDict.linkText.content) ?
-        '<p class="card-text videoLink"><a href="' + ytvDict.linkPath.content + '" class="card-link" title="For more information visit: ' + ytvDict.linkText.content + '" target="_blank"><em>' + ytvDict.linkText.content + '</em></a></p>' :
+    let cardLink = (vmvDict.linkPath.content && vmvDict.linkText.content) ?
+        '<p class="card-text videoLink"><a href="' + vmvDict.linkPath.content + '" class="card-link" title="For more information visit: ' + vmvDict.linkText.content + '" target="_blank"><em>' + vmvDict.linkText.content + '</em></a></p>' :
         '<span class="videoLink visually-hidden">No Proper Link Provided</span>';
 
 
@@ -167,7 +168,7 @@ try {
      *  define footer wrapper
      * 
      * */
-    let openCardFooter = (ytvDict.footer.content) ?
+    let openCardFooter = (vmvDict.footer.content) ?
         '<div class="card-footer border-0 rounded-0 bg-transparent">' :
         '<div class="card-footer visually-hidden">';
 
@@ -178,8 +179,8 @@ try {
      *  parse for footer
      * 
      * */
-    let cardFooter = (ytvDict.footer.content) ?
-        '<p class="card-text cardFooter">' + ytvDict.footer.content + '</p>' :
+    let cardFooter = (vmvDict.footer.content) ?
+        '<p class="card-text cardFooter">' + vmvDict.footer.content + '</p>' :
         '<span class="cardFooter visually-hidden">No Footer provided</span>';
 
 
@@ -192,7 +193,7 @@ try {
     writeDocument(
         [
             beginningHTML,
-            ytvDict.anchorTag.content,
+            vmvDict.anchorTag.content,
             openVideoWrapper,
             openVideoInner,
             videoString,
