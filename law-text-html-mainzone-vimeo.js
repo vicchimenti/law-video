@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 1.0
+ *      @version 1.1
  */
 
 
@@ -103,6 +103,7 @@ try {
     let closeVideoWrapper = '</div>';
     let openVideoInner = '<div class="embeddedVideoInner container-fluid g-0">';
     let closeVideoInner = '</div>';
+    let anchorWrap = vmvDict.anchorTag.content || '<span class="d-none hidden visually-hidden">No content anchor</span>';
 
 
 
@@ -193,7 +194,7 @@ try {
     writeDocument(
         [
             beginningHTML,
-            vmvDict.anchorTag.content,
+            anchorWrap,
             openVideoWrapper,
             openVideoInner,
             videoString,
