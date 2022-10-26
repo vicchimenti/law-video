@@ -113,20 +113,20 @@ try {
      * */
 
     let videoString = (vmvDict.title.content) ?
-        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
-        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?playlist=' + vmvDict.videoId.content + '&mute=0&enablejsapi=1&autoplay=0&loop=0&controls=1&modestbranding=1&playsinline=1&fs=0&iv_load_policy=3&rel=0&disablekb=1&origin=https://law.seattleu.edu" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
-
-    https: //player.vimeo.com/video/<t4 type='content' name='Video ID' output='normal' modifiers='striptags' />?<t4 type='content' name='Account Control Code' output='normal' modifiers='striptags,htmlentities' />&autoplay=true&loop=true&byline=false&controls=true&muted=true&portrait=false&title=false&speed=false&background=1&api=1"  loading="eagar" 
+        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
+        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
 
 
 
-        /***
-         *  define body wrapper
-         * 
-         * */
-        let openCardBody = (vmvDict.title.content || vmvDict.description.content || vmvDict.linkPath.content) ?
-            '<div class="card-body">' :
-            '<div class="card-body visually-hidden">';
+
+
+    /***
+     *  define body wrapper
+     * 
+     * */
+    let openCardBody = (vmvDict.title.content || vmvDict.description.content || vmvDict.linkPath.content) ?
+        '<div class="card-body">' :
+        '<div class="card-body visually-hidden">';
 
 
 
