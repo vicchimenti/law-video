@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 2.1
+ *      @version 2.2
  */
 
 
@@ -114,8 +114,8 @@ try {
      * */
 
     let videoString = (vmvDict.title.content) ?
-        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
-        '<iframe src="https: //player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
+        '<iframe src="https://player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
+        '<iframe src="https://player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
 
 
 
