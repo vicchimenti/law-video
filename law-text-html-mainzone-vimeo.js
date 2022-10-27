@@ -113,9 +113,11 @@ try {
      * 
      * */
 
-    let videoString = (vmvDict.title.content) ?
+    let videoString = (vmvDict.videoId.content && vmvDict.title.content) ?
         '<iframe src="https://player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.title.content + '" class="card-img-top"></iframe>' :
-        '<iframe src="https://player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>';
+        (vmvDict.videoId.content) ?
+        '<iframe src="https://player.vimeo.com/video/' + vmvDict.videoId.content + '?&autoplay=false&loop=true&byline=false&controls=true&muted=false&portrait=false&title=true&speed=true&background=1&api=1" loading="lazy" title="' + vmvDict.contentName.content + '" class="card-img-top"></iframe>' :
+        '<p><strong>No Valid Vimeo ID Provided</strong></p>';
 
 
 
